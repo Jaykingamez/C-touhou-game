@@ -1,0 +1,32 @@
+#include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
+#include "dialogue.h"
+
+static bool dialogueHasTag(DIALOGUE *obj, const char *noun)
+{
+  return noun != NULL && *noun != '\0' && strcmp(noun, obj->tag) == 0;
+}
+
+static DIALOGUE *getDialogue(const char *noun)
+{
+  DIALOGUE *obj, *res = NULL;
+  for (obj = dialogue; obj < endOfObjs; obj++)
+  {
+    if (dialogueHasTag(obj, noun))
+    {
+      res = obj;
+    }
+  }
+  return res;
+}
+
+DIALOGUE *getDialogue(const char *intention, const char *noun)
+{
+  DIALOGUE *obj = getDialogue(noun);
+  if (obj == NULL)
+  {
+    printf("I don't understand %s.\n", intention);
+  }
+  return obj;
+}
