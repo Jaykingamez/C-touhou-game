@@ -29,3 +29,9 @@ bool checkThirstDead()
   }
   return false;
 }
+
+void printThirst()
+{
+  printf("\n If thirst reaches %d you die, it increases by %d after every action", FULL, INCREASE);
+  printf("\n Thirst: %d", thirst);
+}
