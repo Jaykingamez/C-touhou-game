@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
+#include "action.h"
 
 bool parseAndExecute(char *input)
 {
