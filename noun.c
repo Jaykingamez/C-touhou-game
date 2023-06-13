@@ -11,7 +11,7 @@ static bool dialogueHasTag(DIALOGUE *obj, const char *noun)
 static DIALOGUE *getDialogue(const char *noun)
 {
   DIALOGUE *obj, *res = NULL;
-  for (obj = dialogue; obj < endOfObjs; obj++)
+  for (obj = dialogues; obj < endOfDialogues; obj++)
   {
     if (dialogueHasTag(obj, noun))
     {
