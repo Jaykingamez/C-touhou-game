@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
 #include "dialogue.h"
 #include "noun.h"
+#include "thirst.h"
+#include "hunger.h"
 
 // edit this later
 void executeAsk(const char *noun)
@@ -12,9 +16,32 @@ void executeAsk(const char *noun)
   }
   else
   {
-    printf("\nYou: %s", obj->dialogue);
-    printf("\nMysterious girl: %s", obj->response);
-    printf("\nYour thoughts: %s", obj->comment);
+    printf("\n\nYou: %s", obj->dialogue);
+    printf("\n\nMysterious girl: %s", obj->response);
+    printf("\n\nYour thoughts: %s", obj->comment);
     printf("\n");
+
+    // check if ask food/water then sated TODO
+    // printf("Tag: %s", obj->tag);
+    if (strcmp(obj->tag, "food") == 0)
+    {
+      fillHunger();
+    }
+    else if (strcmp(obj->tag, "water") == 0)
+    {
+      fillThirst();
+    }
+
+    increaseHunger();
+    increaseThirst();
+    if (checkHungerDead() || checkThirstDead())
+    {
+      // You die TODO
+    }
+    printf("\n\n");
+    printHunger();
+    printf("\n\n");
+    printThirst();
+    printf("\n\n");
   }
 }
