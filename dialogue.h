@@ -17,4 +17,7 @@ extern DIALOGUE dialogues[];
 #define when (dialogues + 5)
 #define how (dialogues + 6)
 #define why (dialogues + 7)
-#define endOfDialogues (dialogues + 8)
+#define suika (dialogues + 8)
+#define iku (dialogues + 9)
+#define tenshi (dialogues + 10)
+#define endOfDialogues (dialogues + 11)
