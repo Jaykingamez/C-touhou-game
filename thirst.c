@@ -7,7 +7,7 @@
 
 // Increase to 100, you die
 // Increase by 10 after every conversation
-static int thirst = 80;
+int thirst = 80;
 
 // If return false, not dead
 // If return true, very dead
@@ -56,6 +56,6 @@ char *thirstDescription()
 
 void printThirst()
 {
-  printf("Thirst: %d", thirst);
+  // printf("Thirst: %d", thirst);
   printf(thirstDescription());
 }
