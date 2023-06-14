@@ -9,7 +9,7 @@
 // edit this later
 void executeAsk(const char *noun)
 {
-  DIALOGUE *obj = getDialogueOption("what you want to get", noun);
+  DIALOGUE *obj = getDialogueOption("what you want to ask", noun);
   if (obj == NULL)
   {
     // already handled by getDialogueOption
@@ -31,17 +31,5 @@ void executeAsk(const char *noun)
     {
       fillThirst();
     }
-
-    increaseHunger();
-    increaseThirst();
-    if (checkHungerDead() || checkThirstDead())
-    {
-      // You die TODO
-    }
-    printf("\n\n");
-    printHunger();
-    printf("\n\n");
-    printThirst();
-    printf("\n\n");
   }
 }
