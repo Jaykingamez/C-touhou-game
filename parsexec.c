@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "action.h"
+#include "thirst.h"
+#include "hunger.h"
 
 bool parseAndExecute(char *input)
 {
@@ -16,6 +18,7 @@ bool parseAndExecute(char *input)
     else if (strcmp(verb, "ask") == 0)
     {
       executeAsk(noun);
+      action();
     }
     else if (strcmp(verb, "intro") == 0)
     {
@@ -52,7 +55,39 @@ bool parseAndExecute(char *input)
     else
     {
       printf("I don't know how to '%s'.\n", verb);
+      action();
     }
   }
   return true;
+}
+
+// Return false, die.
+bool action()
+{
+  increaseHunger();
+  increaseThirst();
+  if (checkHungerDead() || checkThirstDead())
+  {
+    if (checkHungerDead())
+    {
+      printf("\n\nDo you know what happens to during starvation? Your cells cannibalize themselves. So your body eats itself. You have been eaten, none other by yourself. Blame your horrible caretaker. Or is it your fault for not knowing to speak up?");
+      printf("\n\nGame Over");
+      printf("\n\nPress any key to exit, all the best for your next try, you damned soul.");
+      getchar();
+      return false;
+    }
+    else if (checkThirstDead())
+    {
+      printf("\n\nDo you know what happens when you die from thirst? Your kidney fails. And when your kidney fails, good things don't happen. Blame your horrible caretaker. Or is it your fault for not knowing to speak up?");
+      printf("\n\nGame Over");
+      printf("\n\nPress any key to exit, all the best for your next try, you damned soul.");
+      getchar();
+      return false;
+    }
+  }
+  printf("\n\n");
+  printHunger();
+  printf("\n\n");
+  printThirst();
+  printf("\n\n");
 }
