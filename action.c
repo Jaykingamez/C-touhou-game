@@ -31,5 +31,13 @@ void executeAsk(const char *noun)
     {
       fillThirst();
     }
+
+    // add death flag if you mention wrong character
+    // add some flavour dialogue
+
+    // probably some multi choice ending, like remove blindfold
+    // 1. Embrace your new super short yandere girlfrield you lolicon
+    // 2. Sock her in the face, because she almost got you killed
+    // 3. Become Giorno Giovanni
   }
 }
