@@ -1,2 +1,1 @@
-extern DIALOGUE *getDialogue(const char *intention, const char *noun);
-
+extern DIALOGUE *getDialogueOption(const char *intention, const char *noun);
