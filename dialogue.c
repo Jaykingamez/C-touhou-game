@@ -33,4 +33,14 @@ DIALOGUE dialogues[] = {
      "when",
      "What time is it?",
      "I don't know the time very well. I usually get my servants like Iku to do it.",
-     "Iku? That narrows down the answer by a lot. It's either Suika, Iku or Tenshi? Or are they pretending to be someone they aren't?"}};
+     "Iku? That narrows down the answer by a lot. It's either Suika, Iku or Tenshi? Or are they pretending to be someone they aren't?"},
+    {"ask",
+     "how",
+     "How are you?",
+     "I am fine. Thanks for asking darling. I'm a child of heaven after all.",
+     "A literal child? What a spoiled brat."},
+    {"ask",
+     "why",
+     "Why do this?"
+     "Why not? I don't take no as answers. I'm the great Tenshi-sama after all.",
+     "Who the hell is Tenshi?"}};
