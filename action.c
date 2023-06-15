@@ -70,7 +70,7 @@ bool executeAsk(const char *noun)
       typeText("n\nBut then it set in that the cute girl before you was the one who kidnapped you and almost got you killed. Scanning her from head to toe, there was one thing you are sure of, you are not into her.");
       typeText("She stepped closer to you, and if this was a movie, you feel that there should be some romantic tension, but there wasn't because the girl was a monster.");
       typeText("The girl snapped her fingers, and a red laser from somewhere cut your restraints like butter. It was as if she was demonstrating her abilities.");
-      typeText("It's your turn, maestro. Pick the ending you woud like. Just type the number.");
+      typeText("It's your turn, maestro. Pick the ending you would like. Just type the number.");
 
       typeText("1) She's hella cute, even tho I'm not into her, we could be friends you know. Perhaps she's misunderstood.");
       typeText("2) Your fists are roaring to destroy the monster disguised as a girl ");
