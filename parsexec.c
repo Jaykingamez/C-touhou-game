@@ -5,6 +5,8 @@
 #include "thirst.h"
 #include "hunger.h"
 
+bool action();
+
 bool parseAndExecute(char *input)
 {
   char *verb = strtok(input, " \n");
@@ -17,7 +19,12 @@ bool parseAndExecute(char *input)
     }
     else if (strcmp(verb, "ask") == 0)
     {
-      executeAsk(noun);
+      bool result = executeAsk(noun);
+      // you die lol
+      if (result == false)
+      {
+        return result;
+      }
       action();
     }
     else if (strcmp(verb, "intro") == 0)
@@ -44,14 +51,6 @@ bool parseAndExecute(char *input)
       printf("\n\nYour mind were only swarmed with thoughts on them.");
       printf("\n");
     }
-    else if (strcmp(verb, "ending") == 0)
-    {
-      printf("\n\n☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢☢!!!");
-      printf("\n\nNO ONE ESCAPES FROM GENSOKYO!!!!!");
-      printf("\n\nBut your stand manifested, GOLDEN EXPERIENCE!");
-      printf("\n\nAnd you killed Yukari, Reimu, Marisa and all the crazy people trying to stop you.");
-      printf("\n\nAnd then you realized, you are Giorno Giovanni, why the fuck are you doing here?");
-    }
     else
     {
       printf("I don't know how to '%s'.\n", verb);
@@ -72,7 +71,7 @@ bool action()
     {
       printf("\n\nDo you know what happens to during starvation? Your cells cannibalize themselves. So your body eats itself. You have been eaten, none other by yourself. Blame your horrible caretaker. Or is it your fault for not knowing to speak up?");
       printf("\n\nGame Over");
-      printf("\n\nPress any key to exit, all the best for your next try, you damned soul.");
+      printf("\n\nPress any key and enter to exit, all the best for your next try, you damned soul.");
       getchar();
       return false;
     }
@@ -80,7 +79,7 @@ bool action()
     {
       printf("\n\nDo you know what happens when you die from thirst? Your kidney fails. And when your kidney fails, good things don't happen. Blame your horrible caretaker. Or is it your fault for not knowing to speak up?");
       printf("\n\nGame Over");
-      printf("\n\nPress any key to exit, all the best for your next try, you damned soul.");
+      printf("\n\nPress any key and enter to exit, all the best for your next try, you damned soul.");
       getchar();
       return false;
     }

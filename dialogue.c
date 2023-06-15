@@ -46,13 +46,16 @@ DIALOGUE dialogues[] = {
      "Who the hell is Tenshi?"},
     {"ask",
      "suika",
+     "Are you Suika?"
      "That drunk! The mere mention of her infuriates me.",
      "Guess I'll never mention her again..."},
     {"ask",
      "iku",
+     "Are you Iku?",
      "Did you seriously think I was IKU!!!!"
      "Ooops."},
     {"ask",
      "tenshi",
+     "Are you Tenshi?",
      "Darling, glad that you realize who I truly am.",
      "No, I am most displeased."}};
