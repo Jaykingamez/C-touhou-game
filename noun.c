@@ -21,7 +21,7 @@ static DIALOGUE *getDialogue(const char *noun)
   return res;
 }
 
-DIALOGUE *getDialogue(const char *intention, const char *noun)
+DIALOGUE *getDialogueOption(const char *intention, const char *noun)
 {
   DIALOGUE *obj = getDialogue(noun);
   if (obj == NULL)
