@@ -77,7 +77,7 @@ bool executeAsk(const char *noun)
       char input = getchar();
       // printf("%d", input);
       // printf("%c", input);
-      // getchar();
+      getchar(); // this code for some reason stops the terminal from closing?????
       // Tenshi enjoyer ending
       if (input == '1')
       {
