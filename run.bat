@@ -1,0 +1,1 @@
+gcc *.c -o Output.exe  %GTK4-PKG-CONFIG%
