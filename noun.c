@@ -27,7 +27,6 @@ DIALOGUE *getDialogueOption(const char *intention, const char *noun)
   DIALOGUE *obj = getDialogue(noun);
   if (obj == NULL)
   {
-    printf("ohno");
     typeTextf("I don't understand %s.\n", intention);
   }
   return obj;
