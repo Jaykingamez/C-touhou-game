@@ -5,6 +5,9 @@
 
 void typeText(char* text) {
     printf("\n\n");
+    // Uncomment this for not debug
+    // printf("%s", text);
+    // Comment out all stuff below for debug
     for(int i = 0; i < strlen(text); i++) {
         Sleep(30);
         if ( kbhit() ) {
