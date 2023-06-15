@@ -70,24 +70,21 @@ bool action()
   {
     if (checkHungerDead())
     {
-      printf("\n\nDo you know what happens to during starvation? Your cells cannibalize themselves. So your body eats itself. You have been eaten, none other by yourself. Blame your horrible caretaker. Or is it your fault for not knowing to speak up?");
-      printf("\n\nGame Over");
-      printf("\n\nPress any key and enter to exit, all the best for your next try, you damned soul.");
+      typeText("Do you know what happens to during starvation? Your cells cannibalize themselves. So your body eats itself. You have been eaten, none other by yourself. Blame your horrible caretaker. Or is it your fault for not knowing to speak up?");
+      typeText("Game Over");
+      typeText("Press any key and enter to exit, all the best for your next try, you damned soul.");
       getchar();
       return false;
     }
     else if (checkThirstDead())
     {
-      printf("\n\nDo you know what happens when you die from thirst? Your kidney fails. And when your kidney fails, good things don't happen. Blame your horrible caretaker. Or is it your fault for not knowing to speak up?");
-      printf("\n\nGame Over");
-      printf("\n\nPress any key and enter to exit, all the best for your next try, you damned soul.");
+      typeText("Do you know what happens when you die from thirst? Your kidney fails. And when your kidney fails, good things don't happen. Blame your horrible caretaker. Or is it your fault for not knowing to speak up?");
+      typeText("Game Over");
+      typeText("Press any key and enter to exit, all the best for your next try, you damned soul.");
       getchar();
       return false;
     }
   }
-  printf("\n\n");
   printHunger();
-  printf("\n\n");
   printThirst();
-  printf("\n\n");
 }
