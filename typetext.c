@@ -9,7 +9,7 @@ void typeText(char* text) {
     // printf("%s", text);
     // Comment out all stuff below for debug
     for(int i = 0; i < strlen(text); i++) {
-        Sleep(30);
+        Sleep(20);
         if ( kbhit() ) {
             if ( getch() == '\r' ) {
                 // print the rest of the text
