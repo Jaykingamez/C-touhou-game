@@ -1,1 +1,1 @@
-extern void executeAsk(const char *noun);
+extern bool executeAsk(const char *noun);
