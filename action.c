@@ -15,6 +15,7 @@ bool executeAsk(const char *noun)
   if (obj == NULL)
   {
     // already handled by getDialogueOption
+    return true;
   }
   else
   {
@@ -119,5 +120,6 @@ bool executeAsk(const char *noun)
         return false;
       }
     }
+    return true;
   }
 }

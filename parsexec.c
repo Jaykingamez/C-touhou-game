@@ -26,7 +26,7 @@ bool parseAndExecute(char *input)
       {
         return result;
       }
-      action();
+      return action();
     }
     else if (strcmp(verb, "intro") == 0)
     {
@@ -55,7 +55,7 @@ bool parseAndExecute(char *input)
     else
     {
       printf("I don't know how to '%s'.\n", verb);
-      action();
+      return action();
     }
   }
   return true;
@@ -87,4 +87,5 @@ bool action()
   }
   printHunger();
   printThirst();
+  return true;
 }
