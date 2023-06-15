@@ -3,6 +3,7 @@
       "*.txt": "ck3",
       "stdio.h": "c",
       "dialogue.h": "c",
-      "stdbool.h": "c"
+      "stdbool.h": "c",
+      "string.h": "c"
     }
 }

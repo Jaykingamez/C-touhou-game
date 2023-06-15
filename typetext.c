@@ -1,4 +1,4 @@
-#include<windows.h>
+#include <windows.h>
 #include <string.h>
 #include <conio.h>
 #include <stdio.h>
@@ -19,4 +19,15 @@ void typeText(char* text) {
         fflush(stdout);
     }
     Sleep(200);
+}
+
+
+void typeTextf(char *format, ...) {
+    char buffer [201];
+    va_list args;
+
+    va_start(args, format);
+    vsnprintf(buffer, 200, format, args);
+    va_end(args);
+    typeText(buffer);
 }
