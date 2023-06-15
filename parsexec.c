@@ -4,6 +4,7 @@
 #include "action.h"
 #include "thirst.h"
 #include "hunger.h"
+#include "typetext.h"
 
 bool action();
 
@@ -29,26 +30,26 @@ bool parseAndExecute(char *input)
     }
     else if (strcmp(verb, "intro") == 0)
     {
-      printf("\n\nIntro");
-      printf("\n\nYou are a proud asexual man/woman. Which is why living in Gensokyo is almost impossible");
-      printf("\n\nSome of the inhabitants don't get it when you say no. They are Youkai, they aren't used to being rejected.");
-      printf("\n\nBut you didn't expect things to turn out like this...");
-      printf("\n\nYou don't know what the Youkai did to you, but your head hurts. You don't remember your name...");
-      printf("\n\nSomething is covering your eyes. Even if you forced them open, an endless void of darkness greeted you. Your hands were tied behind your back, the restraints are biting into your skin. You're sitting on something and based off your posture, you guess it's a chair. You hear footsteps...\n");
-      printf("\n\nMysterious girl: \"Ah, you're finally awake.\"");
-      printf("\n\nThere was one problem, you don't recognize the woman's voice.");
-      printf("\n\nMysterious girl: \"I have told you many times, but it seems you wouldn't listen, making me resort to this. This is all your fault, you understand don't you?\"\n\n");
-      printf("\n\nYou struggled to shake your head. You couldn't shake your head, something kept it in place, and your mouth was gagged.\n");
-      printf("\n\nMysterious girl: \"Ara ara, I'm so so sorry...\"");
-      printf("\n\nThe damn thing was removed from your mouth. You could speak, but what should you say?");
-      printf("\n\nAs your stomach growled and your throat was parched with thirst, you realized your starving, and that you're thirsty");
-      printf("\n\nYou didn't feel like chit chatting. Sating your current needs was the goal.");
-      printf("\n\nYou only had the energy to utter a single word at a time. As your mouth hung open, before closing");
-      printf("\n\nMemories from your time at Ms Keine, flooded your mind, when asking questions one should use 5W1H. You don't know why they appeared, but they seemed useful.");
-      printf("\n\nAnd considering that you're blindfolded, you guess that whoever they are, really wants you to guess their identity.");
-      printf("\n\nSo what to ask?");
-      printf("\n\nfood or water?");
-      printf("\n\nYour mind were only swarmed with thoughts on them.");
+      typeText("Intro");
+      typeText("You are a proud asexual man/woman. Which is why living in Gensokyo is almost impossible");
+      typeText("Some of the inhabitants don't get it when you say no. They are Youkai, they aren't used to being rejected.");
+      typeText("But you didn't expect things to turn out like this...");
+      typeText("You don't know what the Youkai did to you, but your head hurts. You don't remember your name...");
+      typeText("Something is covering your eyes. Even if you forced them open, an endless void of darkness greeted you. Your hands were tied behind your back, the restraints are biting into your skin. You're sitting on something and based off your posture, you guess it's a chair. You hear footsteps...\n");
+      typeText("Mysterious girl: \"Ah, you're finally awake.\"");
+      typeText("There was one problem, you don't recognize the woman's voice.");
+      typeText("Mysterious girl: \"I have told you many times, but it seems you wouldn't listen, making me resort to this. This is all your fault, you understand don't you?\"");
+      typeText("You struggled to shake your head. You couldn't shake your head, something kept it in place, and your mouth was gagged.\n");
+      typeText("Mysterious girl: \"Ara ara, I'm so so sorry...\"");
+      typeText("The damn thing was removed from your mouth. You could speak, but what should you say?");
+      typeText("As your stomach growled and your throat was parched with thirst, you realized your starving, and that you're thirsty");
+      typeText("You didn't feel like chit chatting. Sating your current needs was the goal.");
+      typeText("You only had the energy to utter a single word at a time. As your mouth hung open, before closing");
+      typeText("Memories from your time at Ms Keine, flooded your mind, when asking questions one should use 5W1H. You don't know why they appeared, but they seemed useful.");
+      typeText("And considering that you're blindfolded, you guess that whoever they are, really wants you to guess their identity.");
+      typeText("So what to ask?");
+      typeText("food or water?");
+      typeText("Your mind were only swarmed with thoughts on them.");
       printf("\n");
     }
     else

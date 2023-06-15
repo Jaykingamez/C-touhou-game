@@ -6,6 +6,7 @@
 #include "thirst.h"
 #include "hunger.h"
 #include "display_picture.h"
+#include "typetext.h"
 
 // edit this later
 bool executeAsk(const char *noun)
@@ -17,9 +18,9 @@ bool executeAsk(const char *noun)
   }
   else
   {
-    printf("\n\nYou: %s", obj->dialogue);
-    printf("\n\nMysterious girl: %s", obj->response);
-    printf("\n\nYour thoughts: %s", obj->comment);
+    typeTextf("You: %s", obj->dialogue);
+    typeTextf("Mysterious girl: %s", obj->response);
+    typeTextf("Your thoughts: %s", obj->comment);
     printf("\n");
 
     // check if ask food/water then sated TODO
