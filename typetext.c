@@ -21,10 +21,13 @@ void typeText(char* text) {
     Sleep(200);
 }
 
+
 void typeTextf(char *format, ...) {
     char buffer [201];
     va_list args;
 
-    snprintf(buffer, 200, format, args);
+    va_start(args, format);
+    vsnprintf(buffer, 200, format, args);
+    va_end(args);
     typeText(buffer);
 }

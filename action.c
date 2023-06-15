@@ -21,7 +21,6 @@ bool executeAsk(const char *noun)
     typeTextf("You: %s", obj->dialogue);
     typeTextf("Mysterious girl: %s", obj->response);
     typeTextf("Your thoughts: %s", obj->comment);
-    printf("\n");
 
     // check if ask food/water then sated TODO
     // printf("Tag: %s", obj->tag);
