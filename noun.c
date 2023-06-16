@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "dialogue.h"
+#include "typetext.h"
 
 static bool dialogueHasTag(DIALOGUE *obj, const char *noun)
 {
@@ -26,7 +27,7 @@ DIALOGUE *getDialogueOption(const char *intention, const char *noun)
   DIALOGUE *obj = getDialogue(noun);
   if (obj == NULL)
   {
-    printf("I don't understand %s.\n", intention);
+    typeTextf("I don't understand %s.\n", intention);
   }
   return obj;
 }

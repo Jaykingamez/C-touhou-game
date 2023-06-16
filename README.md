@@ -37,3 +37,14 @@ Stores dialogue struct which stores conversation options based off the input
 ### action
 
 Handles the outputting of dialogue from dialogue module
+
+## Building the project (For developers)
+1. Follow the [link](https://www.gtk.org/docs/installations/windows) to set up MSYS2.
+1. Run `pacman -Syu` to update repository
+1. Install [make](https://packages.msys2.org/package/make) and [pkg-config](https://www.msys2.org/docs/pkgconfig/)
+1. Run `make clean && make all` in the project directory.
+
+### Citations
+
+https://dryoma.itch.io/footsteps-sounds
+https://cicifyre.itch.io/free-voice-clips-pack-bright-female

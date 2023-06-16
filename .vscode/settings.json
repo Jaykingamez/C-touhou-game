@@ -2,6 +2,9 @@
     "files.associations": {
       "*.txt": "ck3",
       "stdio.h": "c",
-      "dialogue.h": "c"
+      "dialogue.h": "c",
+      "stdbool.h": "c",
+      "string.h": "c",
+      "windows.h": "c"
     }
 }

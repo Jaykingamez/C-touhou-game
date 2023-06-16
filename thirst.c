@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "thirst.h"
+#include "typetext.h"
 
 #define INCREASE 10
 #define FULL 100
@@ -57,5 +58,5 @@ char *thirstDescription()
 void printThirst()
 {
   // printf("Thirst: %d", thirst);
-  printf(thirstDescription());
+  typeText(thirstDescription());
 }
