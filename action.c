@@ -68,7 +68,7 @@ bool executeAsk(const char *noun)
     }
     else if (strcmp(obj->tag, "tenshi") == 0)
     {
-      display_picture_window("tenshi.png");
+      display_picture_window("girl.png");
       // true ending
       typeText("The damn thing blocking your eyes was removed and before your sight was like a goddess after your harrowing experience");
       typeText("n\nBut then it set in that the cute girl before you was the one who kidnapped you and almost got you killed. Scanning her from head to toe, there was one thing you are sure of, you are not into her.");
