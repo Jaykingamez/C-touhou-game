@@ -8,14 +8,14 @@ BUILT_SRC = resources.c
 
 OBJS = $(BUILT_SRC:.c=.o) $(SRC:.c=.o)
 
-all: exampleapp
+all: Output
 
 %.o: %.c
 	$(CC) -c -o $(@F) $(CFLAGS) $<
 
-exampleapp: $(OBJS)
+Output: $(OBJS)
 	$(CC) -o $(@F) $(OBJS) $(LIBS)
 
 clean:
 	rm -f $(OBJS)
-	rm -f exampleapp
+	rm -f Output
