@@ -1,1 +1,1 @@
-gcc *.c  -o Output.exe -lwinmm %GTK4-PKG-CONFIG%
+gcc `pkg-config --cflags gtk4` *.c  -o Output.exe -lwinmm `pkg-config --libs gtk4`
