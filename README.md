@@ -37,3 +37,8 @@ Stores dialogue struct which stores conversation options based off the input
 ### action
 
 Handles the outputting of dialogue from dialogue module
+
+### Citations
+
+https://dryoma.itch.io/footsteps-sounds
+https://cicifyre.itch.io/free-voice-clips-pack-bright-female
