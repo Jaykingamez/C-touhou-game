@@ -1,1 +1,1 @@
-gcc *.c -o Output.exe -lwinmm %GTK4-PKG-CONFIG%
+gcc *.c  -o Output.exe -lwinmm %GTK4-PKG-CONFIG%
