@@ -23,7 +23,7 @@ bool parseAndExecute(char *input)
     {
       bool result = executeAsk(noun);
       // you die lol
-      if (result == false)
+      if (!result)
       {
         return result;
       }
