@@ -1,21 +1,22 @@
 CC ?= gcc
 PKGCONFIG = $(shell which pkg-config)
-CFLAGS = $(shell $(PKGCONFIG) --cflags gtk4) -I./sound -Wall
+INCLUDE = ./include
+CFLAGS = $(shell $(PKGCONFIG) --cflags gtk4) -Wall $(patsubst %, -I%, $(INCLUDE))
 LIBS = $(shell $(PKGCONFIG) --libs gtk4) -lwinmm
+SRC = $(wildcard src/*.c)
+EXE = bin/TouhouAloneWithAYandere-1.0.1.exe
+# BUILT_SRC = src/resources.c
+# OBJS = $(BUILT_SRC:src/%.c=obj/%.o) $(SRC:src/%.c=obj/%.o)
+OBJS = $(SRC:src/%.c=obj/%.o)
 
-SRC = action.c  dialogue.c  display_picture.c  hunger.c  main.c  noun.c  parsexec.c  playSound.c  thirst.c  typetext.c
-BUILT_SRC = resources.c
+all: $(EXE)
 
-OBJS = $(BUILT_SRC:.c=.o) $(SRC:.c=.o)
+$(OBJS): obj/%.o: src/%.c
+	$(CC) -c -o $(@) $(CFLAGS) $<
 
-all: Output
-
-%.o: %.c
-	$(CC) -c -o $(@F) $(CFLAGS) $<
-
-Output: $(OBJS)
-	$(CC) -o $(@F) $(OBJS) $(LIBS)
+$(EXE): $(OBJS)
+	$(CC) -o $(@) $(OBJS) $(LIBS)
 
 clean:
 	rm -f $(OBJS)
-	rm -f Output
+	rm -f $(EXE)

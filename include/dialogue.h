@@ -1,3 +1,5 @@
+#ifndef __DIALOGUE_H__
+#define __DIALOGUE_H__
 typedef struct dialogue
 {
   const char *action;   // Eg. Ask
@@ -21,3 +23,4 @@ extern DIALOGUE dialogues[];
 #define iku (dialogues + 9)
 #define tenshi (dialogues + 10)
 #define endOfDialogues (dialogues + 11)
+#endif

@@ -1,1 +1,0 @@
-extern void display_picture_window(char* filename);
