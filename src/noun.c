@@ -4,6 +4,8 @@
 #include "dialogue.h"
 #include "typetext.h"
 
+extern DIALOGUE dialogues[];
+
 static bool dialogueHasTag(DIALOGUE *obj, const char *noun)
 {
   return noun != NULL && *noun != '\0' && strcmp(noun, obj->tag) == 0;

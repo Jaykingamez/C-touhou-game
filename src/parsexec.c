@@ -32,13 +32,13 @@ bool parseAndExecute(char *input)
     else if (strcmp(verb, "intro") == 0)
     {
       typeText("Intro");
-      playMusic("sound/horror.wav");
+      // playMusic("sound/horror.wav");
       typeText("You are a proud asexual man/woman. Which is why living in Gensokyo is almost impossible");
       typeText("Some of the inhabitants don't get it when you say no. They are Youkai, they aren't used to being rejected.");
       typeText("But you didn't expect things to turn out like this...");
       typeText("You don't know what the Youkai did to you, but your head hurts. You don't remember your name...");
       typeText("Something is covering your eyes. Even if you forced them open, an endless void of darkness greeted you.\nYour hands were tied behind your back, the restraints are biting into your skin.");
-      playStop();
+      // playStop();
       playSoundPar("sound/step3.wav", 100);
       typeText("You're sitting on something and based off your posture, you guess it's a chair. You hear footsteps...");
       playSoundPar("sound/hey.wav", 100);

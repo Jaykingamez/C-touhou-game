@@ -1,6 +1,6 @@
 #ifndef __DIALOGUE_H__
 #define __DIALOGUE_H__
-typedef struct dialogue
+typedef struct
 {
   const char *action;   // Eg. Ask
   const char *tag;      // E.g. food
@@ -8,8 +8,6 @@ typedef struct dialogue
   const char *response; // Response from girl
   const char *comment;  // Comment from player (hinting who the hell the girl is)
 } DIALOGUE;
-
-DIALOGUE dialogues[];
 
 #define food (dialogues + 0)
 #define water (dialogues + 1)
