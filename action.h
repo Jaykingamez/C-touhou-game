@@ -1,1 +1,0 @@
-extern bool executeAsk(const char *noun);

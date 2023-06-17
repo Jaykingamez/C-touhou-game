@@ -1,21 +1,31 @@
 CC ?= gcc
 PKGCONFIG = $(shell which pkg-config)
-CFLAGS = $(shell $(PKGCONFIG) --cflags gtk4) -I./sound -Wall
+INCLUDE = ./include
+CFLAGS = $(shell $(PKGCONFIG) --cflags gtk4) -Wall $(patsubst %, -I%, $(INCLUDE))
 LIBS = $(shell $(PKGCONFIG) --libs gtk4) -lwinmm
+SRC = $(wildcard src/*.c)
+EXEDIR = bin/
+DISTDIR = dist/
+EXE = TouhouAloneWithAYandere-1.0.1
+# BUILT_SRC = src/resources.c
+# OBJS = $(BUILT_SRC:src/%.c=obj/%.o) $(SRC:src/%.c=obj/%.o)
+OBJS = $(SRC:src/%.c=obj/%.o)
 
-SRC = action.c  dialogue.c  display_picture.c  hunger.c  main.c  noun.c  parsexec.c  playSound.c  thirst.c  typetext.c
-BUILT_SRC = resources.c
+all: $(EXEDIR)$(EXE).exe $(DISTDIR)$(EXE).zip
 
-OBJS = $(BUILT_SRC:.c=.o) $(SRC:.c=.o)
+$(OBJS): obj/%.o: src/%.c
+	$(CC) -c -o $(@) $(CFLAGS) $<
 
-all: Output
+$(EXEDIR)$(EXE).exe: $(OBJS)
+	$(CC) -o $(@) $(OBJS) $(LIBS)
+	
+$(DISTDIR)$(EXE).zip: $(EXEDIR)$(EXE).exe
+	cp -r $(EXEDIR) $(EXE)/
+	powershell Compress-Archive $(EXE)/ $(@)
+	rm -rf $(EXE)
 
-%.o: %.c
-	$(CC) -c -o $(@F) $(CFLAGS) $<
-
-Output: $(OBJS)
-	$(CC) -o $(@F) $(OBJS) $(LIBS)
 
 clean:
 	rm -f $(OBJS)
-	rm -f Output
+	rm -f $(EXEDIR)$(EXE).exe
+	rm -f $(DISTDIR)$(EXE).zip

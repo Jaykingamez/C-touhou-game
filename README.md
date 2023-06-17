@@ -44,6 +44,8 @@ Handles the outputting of dialogue from dialogue module
 1. Install [make](https://packages.msys2.org/package/make) and [pkg-config](https://www.msys2.org/docs/pkgconfig/)
 1. Run `make clean && make all` in the project directory.
 
+## Running the game (From Release)
+
 ### Citations
 
 https://dryoma.itch.io/footsteps-sounds
