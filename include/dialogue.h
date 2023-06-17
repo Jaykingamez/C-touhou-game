@@ -9,7 +9,7 @@ typedef struct dialogue
   const char *comment;  // Comment from player (hinting who the hell the girl is)
 } DIALOGUE;
 
-extern DIALOGUE dialogues[];
+DIALOGUE dialogues[];
 
 #define food (dialogues + 0)
 #define water (dialogues + 1)

@@ -32,19 +32,21 @@ bool parseAndExecute(char *input)
     else if (strcmp(verb, "intro") == 0)
     {
       typeText("Intro");
+      playMusic("sound/horror.wav");
       typeText("You are a proud asexual man/woman. Which is why living in Gensokyo is almost impossible");
       typeText("Some of the inhabitants don't get it when you say no. They are Youkai, they aren't used to being rejected.");
       typeText("But you didn't expect things to turn out like this...");
       typeText("You don't know what the Youkai did to you, but your head hurts. You don't remember your name...");
       typeText("Something is covering your eyes. Even if you forced them open, an endless void of darkness greeted you.\nYour hands were tied behind your back, the restraints are biting into your skin.");
-      playSoundPar("sound/step3.wav");
+      playStop();
+      playSoundPar("sound/step3.wav", 100);
       typeText("You're sitting on something and based off your posture, you guess it's a chair. You hear footsteps...");
-      playSoundPar("sound/hey.wav");
+      playSoundPar("sound/hey.wav", 100);
       typeText("Mysterious girl: \"Ah, you're finally awake.\"");
       typeText("There was one problem, you don't recognize the woman's voice.");
       typeText("Mysterious girl: \"I have told you many times, but it seems you wouldn't listen, making me resort to this. This is all your fault, you understand don't you?\"");
       typeText("You struggled to shake your head. You couldn't shake your head, something kept it in place, and your mouth was gagged.\n");
-      playSoundPar("sound/gasp.wav");
+      playSoundPar("sound/gasp.wav", 100);
       typeText("Mysterious girl: \"Ara ara, I'm so so sorry...\"");
       typeText("The damn thing was removed from your mouth. You could speak, but what should you say?");
       typeText("As your stomach growled and your throat was parched with thirst, you realized your starving, and that you're thirsty");

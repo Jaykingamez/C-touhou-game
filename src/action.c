@@ -40,7 +40,7 @@ bool executeAsk(const char *noun)
     if (strcmp(obj->tag, "suika") == 0)
     {
       // Waterboarding bruh
-      playSoundPar("sound/what.wav");
+      playSoundPar("sound/what.wav", 100);
       typeText("A towl was thrown against your face. As you felt a kick, you slumped against the ground. Struggling with all your might against the towel, you struggled.");
       typeText("Mysterious girl: Since you think I'm some sort of alcoholic, I am very happy to oblige your fantasy.");
       typeText("A liquid was poured against the towel, pressing against your nostrils.");
@@ -54,7 +54,7 @@ bool executeAsk(const char *noun)
     else if (strcmp(obj->tag, "iku") == 0)
     {
       // Death by electric chair
-      playSoundPar("sound/what.wav");
+      playSoundPar("sound/what.wav", 100);
       typeText("Mysterious girl: You think I'm IKU? Huhhahahahaahah.");
       typeText("The girl scampered off, leaving you by your lonesome with your thoughts.");
       typeText("You felt an object being placed against your head, and you could feel your restraints getting tighter.");

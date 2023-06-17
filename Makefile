@@ -21,7 +21,7 @@ $(EXEDIR)$(EXE).exe: $(OBJS)
 	
 $(DISTDIR)$(EXE).zip: $(EXEDIR)$(EXE).exe
 	cp -r $(EXEDIR) $(EXE)/
-	powershell Compress-Archive $(EXE)/ $(@)
+	powershell Compress-Archive -F $(EXE)/ $(@)
 	rm -rf $(EXE)
 
 
