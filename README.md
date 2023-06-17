@@ -45,6 +45,8 @@ Handles the outputting of dialogue from dialogue module
 1. Run `make clean && make all` in the project directory.
 
 ## Running the game (From Release)
+1. Unzip folder
+1. Run game from shortcut (TouhouAloneWithAYandere-1.0.1.exe.lnk)
 
 ### Citations
 
